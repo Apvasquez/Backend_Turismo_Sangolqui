@@ -4,11 +4,7 @@ export interface Patient {
     surname: string,
     birth: string,
     place: string,
-    // email: string,
-    // address: string,
-    // phone: string,
-    // created_by? : string,
-    // created_at : string
+ 
 };
 
 export function Patient(data: any, id?: string){
