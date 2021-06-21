@@ -1,4 +1,5 @@
 import { Application } from 'express';
+import { createAtractives, lisAtractives } from './controllers/atractivecontroller';
 // import { createClient, retrieveClient, updateClient, deleteClient, listClients, countClient, listClient } from './controllers/client';
 // import { createVaccine, retrieveVaccine, updateVaccine, deleteVaccine, listVaccine } from './controllers/vaccine';
 // import { createPet, retrievePet, updatePet, deletePet, countPet, listPet, listClientPets, listPets, countPetTypes } from './controllers/pet';
@@ -78,4 +79,8 @@ export function routesPatient(app: Application){
 export function routesItems_Menu(app: Application){
     app.post('/api/items_menu', createItems_Menu);
     app.get('/api/items_menu/:page/:limit', lisItemsMenu);
+}
+export function routesAtractives(app: Application){
+    app.post('/api/atractive', createAtractives);
+    app.get('/api/atractive/:page/:limit', lisAtractives);
 }

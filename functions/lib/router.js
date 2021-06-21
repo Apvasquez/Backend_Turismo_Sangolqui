@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.routesItems_Menu = exports.routesPatient = exports.routeSignUp = void 0;
+exports.routesAtractives = exports.routesItems_Menu = exports.routesPatient = exports.routeSignUp = void 0;
+const atractivecontroller_1 = require("./controllers/atractivecontroller");
 // import { createClient, retrieveClient, updateClient, deleteClient, listClients, countClient, listClient } from './controllers/client';
 // import { createVaccine, retrieveVaccine, updateVaccine, deleteVaccine, listVaccine } from './controllers/vaccine';
 // import { createPet, retrievePet, updatePet, deletePet, countPet, listPet, listClientPets, listPets, countPetTypes } from './controllers/pet';
@@ -75,4 +76,9 @@ function routesItems_Menu(app) {
     app.get('/api/items_menu/:page/:limit', menucontroller_1.lisItemsMenu);
 }
 exports.routesItems_Menu = routesItems_Menu;
+function routesAtractives(app) {
+    app.post('/api/atractive', atractivecontroller_1.createAtractives);
+    app.get('/api/atractive/:page/:limit', atractivecontroller_1.lisAtractives);
+}
+exports.routesAtractives = routesAtractives;
 //# sourceMappingURL=router.js.map

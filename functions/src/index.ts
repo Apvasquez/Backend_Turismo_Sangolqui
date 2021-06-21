@@ -3,7 +3,7 @@ import * as admin from 'firebase-admin';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
-import { routesPatient , routesItems_Menu } from './router';
+import { routesPatient , routesItems_Menu, routesAtractives } from './router';
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 admin.initializeApp(functions.config().firebase);
@@ -21,5 +21,6 @@ server.use(bodyParser.urlencoded({extended: false}));
 //  });
 routesPatient(server);
 routesItems_Menu(server);
+routesAtractives(server);
  export const api = functions.https.onRequest(server);
  export { db };

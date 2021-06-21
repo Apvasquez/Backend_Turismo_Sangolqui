@@ -24,5 +24,6 @@ server.use(bodyParser.urlencoded({ extended: false }));
 //  });
 router_1.routesPatient(server);
 router_1.routesItems_Menu(server);
+router_1.routesAtractives(server);
 exports.api = functions.https.onRequest(server);
 //# sourceMappingURL=index.js.map
