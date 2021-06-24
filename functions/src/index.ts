@@ -6,6 +6,7 @@ import * as cors from 'cors';
 import { routesPatient , routesItems_Menu, routesAtractives } from './router';
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
+//Firebase
 admin.initializeApp(functions.config().firebase);
 const db = admin.firestore();
 db.settings({ignoreUndefinedProperties : true, timestampsInSnapshot: true});
